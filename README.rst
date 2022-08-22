@@ -1,3 +1,29 @@
+Build for Ubuntu16.04
+=====================
+
+
+   .. code:: python
+   sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+       libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+       libncurses5-dev libncursesw5-dev xz-utils tk-dev
+   sudo apt-get install liblzma-dev
+
+   cd ../ # outside of this repo
+   
+   wget https://www.python.org/ftp/python/3.9.4/Python-3.9.4.tgz -P .
+   
+   mv Python-3.9.4.tgz python3.9_3.9.4.orig.tar.gz
+   
+   cd python3.9/
+   
+   git checkout debian/3.9.4-1+xenial1
+   
+   debuild
+   
+   # all deb files will be in ../
+
+
+
 This is Python version 3.9.13
 =============================
 
